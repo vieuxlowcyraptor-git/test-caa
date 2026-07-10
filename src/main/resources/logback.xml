@@ -1,0 +1,26 @@
+<configuration>
+    <variable name="LOGGING_LEVEL_ROOT" value="DEBUG"/>
+    <property name="LOG_PATTERN" value="%cyan(%d{'dd/MM/yy HH:mm:ss,SSS',Europe/Paris}) %gray([%X{sessionId:-NO_SESSION}] [%X{address:-NONE}] [%thread]) %highlight([%-5level]) %magenta(%logger{36}) - %msg%n"/>
+
+    <!-- log console -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <target>System.out</target>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>${LOGGING_LEVEL_ROOT}</level>
+        </filter>
+        <encoder>
+            <pattern>${LOG_PATTERN}</pattern>
+        </encoder>
+    </appender>    
+ 
+    <logger name="org.apache.http" level="WARN"/>
+    <logger name="fr.alexanj" level="${LOGGING_LEVEL_ROOT}"/>
+    <logger name="org.hibernate" level="WARN"/>
+    <logger name="org.hibernate.SQL" level="WARN"/>
+    <logger name="org.springframework" level="WARN"/>
+    <logger name="com.zaxxer.hikari" level="WARN"/>    
+    <logger name="_org.springframework.web.servlet.HandlerMapping.Mappings" level="WARN"/>
+    <root>
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>
