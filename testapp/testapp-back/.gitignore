@@ -2,3 +2,5 @@
 /target/
 /.settings/
 /data/
+/mqjms.log.0
+/mqjms.log.0.lck

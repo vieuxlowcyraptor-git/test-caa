@@ -1,5 +1,5 @@
-export class MqMessage {
-  id: number = null; 
-  timestamp: Date = null; 
-  message: string = null;
+export interface Message {
+  id: number; 
+  timestamp: Date; 
+  message: string;
 }

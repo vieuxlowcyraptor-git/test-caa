@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 import {Observable, Subject} from 'rxjs';
-import { MqMessage } from '../mq-message/mq-message';
+import { Message } from '../model/dtos';
 
 export class RestOptions {
   constructor(headers: HttpHeaders, withCredentials = true) {
@@ -38,9 +38,9 @@ export class RestService {
   constructor(private readonly httpClient: HttpClient) {
   }
 
-    getMqMessage(nb: number): Observable<MqMessage[]> {
+    getMqMessage(nb: number): Observable<Message[]> {
         const params = this.createParams({ nb });
-        return this.httpClient.get<MqMessage[]>(`http:/localhost:8080/mq/last`, params);
+        return this.httpClient.get<Message[]>(`/rest/mq/last`, params);
     }
 
     private createParams(params: any, restOptions: RestOptions = this.jsRestOptions): RestOptions {
