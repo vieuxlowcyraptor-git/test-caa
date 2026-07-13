@@ -4,26 +4,20 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>fr.alexanj.proto</groupId>
-	<artifactId>testapp</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<artifactId>testapp-back</artifactId>
 	<packaging>jar</packaging>
 
 	<name>Spring Boot Blank Project (from
 		https://github.com/making/spring-boot-blank)</name>
 
 	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>4.1.0</version>
+		<groupId>fr.alexanj.proto</groupId>
+		<artifactId>testapp</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-
 	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<start-class>fr.alexanj.proto.testapp.App</start-class>
-		<java.version>26</java.version>
+		<start-class>fr.alexanj.testapp.App</start-class>
 	</properties>
-
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
