@@ -10,15 +10,18 @@ Environnement technique :
 - Base de données relationnelle : H2
 
 Choix techniques :
-- Backend lit les messages par 10 toutes les 30s avec @Scheduled et les enregistres dans une base local H2.
-- Utilisation de spring JPA pour l'écriture et la lecture des données en base.
-- Pas de connaisance IBM MQ Series ni de moyen de tester correctement -> mock des réponses au service back,
+- Pas de connaisance IBM MQ Series ni de moyen de tester correctement : mock des réponses au service back,
+- Pas d'info sur le contenu des messages : hypothèse de texte UTF-8 simple,
+- Backend lit les messages par 10 toutes les 30s avec @Scheduled et les enregistres dans une base local H2 pour limiter les données,
+- Utilisation de spring JPA pour l'écriture et la lecture des données en base H2.
+- Deploiement via un jar springboot pour facilité les tests
 
 Installation :
 - testapp/mvn clean install
 
 Démarrage :
-- SpringBoot App: fr.alexanj.testapp.App
+- SpringBoot MainClass: fr.alexanj.testapp.App
+- SpringBoot MainClass: fr.alexanj.testapp.App -Pprod
 - Angular : npm start
 
 Exemples : 
