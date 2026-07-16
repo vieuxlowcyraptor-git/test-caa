@@ -1,4 +1,4 @@
-package fr.alexanj.testapp.repository.model;
+package fr.alexanj.testapp.service.model;
 
 import java.time.LocalDateTime;
 

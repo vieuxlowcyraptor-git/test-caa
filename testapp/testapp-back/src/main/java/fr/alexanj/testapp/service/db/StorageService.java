@@ -1,4 +1,4 @@
-package fr.alexanj.testapp.service;
+package fr.alexanj.testapp.service.db;
 
 import java.util.List;
 
@@ -7,8 +7,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import fr.alexanj.testapp.repository.MessageRepository;
-import fr.alexanj.testapp.repository.model.MqMessage;
+import fr.alexanj.testapp.service.model.MqMessage;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j

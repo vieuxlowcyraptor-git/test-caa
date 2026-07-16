@@ -8,8 +8,8 @@
 	<artifactId>testapp</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
-    <name>${project.artifactId}</name>
-    <description>2RO - ABS</description>
+	<name>${project.artifactId}</name>
+	<description>2RO - ABS</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -17,24 +17,32 @@
 		<version>4.1.0</version>
 	</parent>
 
-    <modules>
-        <module>testapp-back</module>
-        <module>testapp-front</module>
-    </modules>
-    
+	<modules>
+		<module>testapp-back</module>
+		<module>testapp-front</module>
+	</modules>
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>26</java.version>
-        <maven.compiler.source>26</maven.compiler.source>
-        <maven.compiler.target>26</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>26</maven.compiler.source>
+		<maven.compiler.target>26</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <!-- Node.js version -->
-        <node.version>v22.5.0</node.version>   <!-- or latest LTS -->
-        <npm.version>10.8.2</npm.version>
+		<!-- Node.js version -->
+		<node.version>v22.5.0</node.version>   <!-- or latest LTS -->
+		<npm.version>10.8.2</npm.version>
 
-        <!-- Angular build output directory -->
-        <angular.build.directory>dist/test</angular.build.directory>
+		<!-- Angular build output directory -->
+		<angular.build.directory>dist/test</angular.build.directory>
 	</properties>
+	<profiles>
+		<profile>
+			<id>dev</id>
+		</profile>
+		<profile>
+			<id>prod</id>
+		</profile>
+	</profiles>
 
 </project>

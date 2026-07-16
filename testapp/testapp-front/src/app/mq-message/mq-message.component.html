@@ -1,4 +1,4 @@
-@for (mq of mqMessages; track mq.id) {
+@for (mq of mqMessages; track mq) {
 <div class="speech-bubble">
 	<div class="text-right"><span class="text-left">ID : {{mq.id}}</span>{{mq.timestamp}}</div>	
 	<div class="text-center">{{mq.message}}</div>
